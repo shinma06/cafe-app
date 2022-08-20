@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} WCB Cafe - SIGNUP {% endblock %}
+
+{% block content %}
+<div id="accounts" class="big-bg">
+    <div class="wrapper">
+        <h2 class="page-title">SIGNUP</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label>
+                ユーザー ID
+            </label>
+            <input type="text" name="username" placeholder="ユーザーIDを設定">
+            <label>
+                パスワード
+            </label>
+            <input type="password" name="password1" placeholder="パスワードを設定">
+            <label>
+                パスワード確認用
+            </label>
+            <input type="password" name="password2" placeholder="パスワードをもう一度入力してください">
+            <small>パスワードは8字以上で設定してください。</small>
+            {% if form.errors %}
+                <span>利用できないユーザー ID やパスワードの可能性があります。入力内容を再度ご確認ください。</span>
+            {% endif %}
+            <button type="submit" class="button">アカウント作成</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="accounts" class="big-bg">
+    <div class="wrapper">
+        <h2 class="page-title">LOGIN</h2>
+        <form method="post">
+            {% csrf_token %}
+            {% for error in form.errors.values %}
+                {{ errer }}
+            {% endfor %}
+            <label>
+                ユーザー ID
+            </label>
+            <input type="text" name="username" placeholder="ユーザーIDを入力してください">
+            <label>
+                パスワード
+            </label>
+            <input type="password" name="password" placeholder="パスワードを入力してください">
+            <button type="submit" class="button">
+                ログインする
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
