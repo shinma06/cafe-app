@@ -1,5 +1,3 @@
-import os
-from dotenv import load_dotenv
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -13,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hs04d84n#**6f%)obzv1%)q@i!&1!0(l%c^o-1qk$t6ahso+uu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['webcafe-app.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,7 +120,3 @@ EMAIL_HOST_USER = 'shinma.0103.2006@gmail.com'
 EMAIL_HOST_PASSWORD = 'tfrgouonvgikfmtn'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
-load_dotenv()
-
-SECRET_KEY = os.getenv('SECRET_KYE')
