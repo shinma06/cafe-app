@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-hs04d84n#**6f%)obzv1%)q@i!&1!0(l%c^o-1qk$t6ahso+uu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://webcafe-app.herokuapp.com']
+ALLOWED_HOSTS = ['webcafe-app.herokuapp.com']
 
 
 # Application definition
